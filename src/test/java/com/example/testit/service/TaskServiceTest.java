@@ -76,8 +76,12 @@ public class TaskServiceTest {
         Mockito.verify(taskRepository).save(Mockito.any(Task.class));
     }
 
-
+    
     public void startTaskTest() {
-
+        var task = new Task();
+        task.setId(1L);
+        Mockito.when(taskRepository.findById(1L)).thenReturn(
+            Optional.of(task)
+        );
     }
 }
