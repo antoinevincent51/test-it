@@ -1,5 +1,12 @@
 @Configuration
 public class SecurityConfig {
+
+        @Bean
+        public PasswordEncoder encoder() {
+                return new BCryptPasswordEncoder();
+        }
+    
+        
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http)
                 throws Exception{
@@ -10,5 +17,6 @@ public class SecurityConfig {
         }
 
 }
+
 
 
