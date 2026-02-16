@@ -13,10 +13,10 @@
                 <constraints unique="true" nullable="false"/>
             </column>
             <column name="password" type="varchar(255)">
-                <constraints unique="true" nullable="false"/>
+                <nullable="false"/>
             </column>
             <column name="role" type="varchar(255)">
-                <constraints unique="true" nullable="false"/>
+                <nullable="false"/>
             </column>
             <column name="manager_id" type="bigint"/>
         </createTable>
